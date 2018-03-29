@@ -1,0 +1,124 @@
+.contact{
+
+    background: #f9f9f9;
+    border-top: 1px solid #ebebeb;
+    padding : 40px 0px;
+
+}
+
+.contact-columns .card{
+    background :#ffffff;
+    border: 3px solid #F5F5F5;
+    -webkit-transition:  ease-out 0.8s;
+    -moz-transition: ease-out 0.8s;
+    -o-transition:  ease-out 0.8s;
+    transition:  ease-out 0.8s;
+}
+
+
+
+.contact-columns .card:hover{
+    transform: translateY(-10px);
+}
+
+
+
+.contact-icon {
+    display: inline-block;
+}
+
+.contact-top-title{
+
+    display: inline-table;
+    top: 20px;
+    left: 110px;
+    position: absolute;
+    font-size: 12px;
+    color: #707070;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+}
+
+.contact-sub-title{
+
+display: inline-table;
+    top: 40px;
+    left: 110px;
+    position: absolute;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 500;
+}
+
+.card .header{
+    margin-bottom: 30px;
+}
+.card .body, .card .header{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card .body ul{
+    list-style: none;
+    padding: 0;
+}
+
+.card .body ul li {
+    padding :10px 0px;
+}
+
+.ficon-contact{
+    color : $primary-color;
+    padding-right: 4px;
+    float: left;
+    top: 6px;
+    position: relative;
+}
+
+.text-contact{
+    display: block;
+    overflow: hidden;
+    line-height: 30px;
+    color: #7d7d7d;
+}
+
+
+.social-icons{
+display : inline-block;
+}
+
+.social-text{
+    display: inline-block;
+    padding-left: 10px;
+    position: absolute;
+    line-height: 2;
+    color: #7d7d7d;
+}
+
+
+.contact-send{
+    padding-top: 40px;
+}
+
+.contact-send button{
+    background: #1c7d7a;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.contact-input{
+      
+        border-bottom: 1px solid $primary-color;
+}
+
+.contact-input input{
+    border: none;
+    outline: none;
+    line-height: 2;
+}
+

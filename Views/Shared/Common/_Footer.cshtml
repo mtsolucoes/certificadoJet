@@ -1,0 +1,77 @@
+﻿@{
+    List<DomainSocialNetwork.Entities.SocialNetwork> redesSociais = Session["SocialNetworkLinks"] != null ? (List<DomainSocialNetwork.Entities.SocialNetwork>)Session["SocialNetworkLinks"] : new List<DomainSocialNetwork.Entities.SocialNetwork>();
+}
+
+<div class="ui container fluid inverted vertical segment footer">
+    <div class="ui container">
+        <div class="ui four column stackable inverted equal height grid">
+           
+            @Html.Action("CustomPages", "Home")
+            
+            <div class="six wide tablet four wide computer column">
+
+                @Html.Action("GetList", "EventList")
+              
+            </div>
+             <div class="six wide tablet four wide computer column">
+                <h4 class="ui inverted header">Central de Relacionamento</h4>
+                <p>Preparada para esclarecer suas dúvidas e problemas.</p>
+                <h5>SAC: @LojaCorp.Control.Company._Company.Phone1</h5>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="ui container fluid inverted vertical segment subFooter">
+    <div class="ui container">
+        <div class="ui two column stackable inverted equal height  grid">
+            <div class="row">
+                <div class="column">
+
+                    @Html.Partial("~/Views/Shared/Common/_Payments_List.cshtml")
+
+                </div>
+                <div class="right aligned column">
+                    @* Page: ~/Views/Company/_EBit.cshtml *@
+                    <div class="ui horizontal list selos">
+                        <div class="item">
+                            @Html.Action("EBit", "Company")
+                        </div>
+                        <div class="item">
+                            <div class="ui tiny images">
+                                @Html.Action("GetCompanySeal", "Company")
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright-container  ui container fluid inverted vertical  ">
+    <div class="ui container">
+
+                    <address class="copyright-footer">
+                        @LojaCorp.Control.Company._Company.FantasyName
+                        @{
+                            string complementAddress = LojaCorp.Control.Company._Company.Complement != "" ? " " + LojaCorp.Control.Company._Company.Complement + ", " : "";
+                        }
+                        @string.Format("{0}, {1}{2}", LojaCorp.Control.Company._Company.Address, complementAddress, LojaCorp.Control.Company._Company.Neighbourhood)
+                        /
+                        @string.Format("{0}-{1}-{2}", LojaCorp.Control.Company._Company.CEP, LojaCorp.Control.Company._Company.City, LojaCorp.Control.Company._Company.State)
+                        /
+                        CNPJ: @LojaCorp.Control.Company._Company.CNPJ
+                    </address> 
+        
+       
+    </div>
+</div>
+
+<div class="modal-block">
+
+</div>
+
+
